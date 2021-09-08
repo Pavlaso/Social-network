@@ -1,0 +1,13 @@
+.post img {
+    width: 50px;
+}
+div .name  {
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: inherit;
+    margin-bottom: 30px;
+}
+.ava img {
+    width: 250px;
+}
+

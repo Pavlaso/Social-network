@@ -1,0 +1,24 @@
+.header {
+    background-color: black;
+    padding-bottom: 20px;
+    grid-column: 2 / 5;
+}
+
+.Club {
+    text-align: center;
+    font-family: Aharoni;
+    font-size: 30px;
+}
+.loginBlock {
+    float: right;
+}
+.login {
+    color: aliceblue;
+}
+.reactImg {
+    height: 60px;
+}
+.miniAva {
+    width: 50px;
+    border-radius: 50px ;
+}

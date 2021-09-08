@@ -1,0 +1,18 @@
+div .name  {
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+.ava  {
+    width: 250px;
+}
+.status {
+    margin-bottom: 10px;
+}
+.information {
+
+}
+.contacts {
+    padding: 0px 0px 0px 20px;
+}

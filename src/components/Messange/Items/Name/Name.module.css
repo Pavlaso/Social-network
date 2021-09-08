@@ -1,0 +1,25 @@
+
+.dialogsItems  a {
+    color: #111111;
+    text-decoration: none;
+}
+.dialogsItems .active{
+     color: lightslategray;
+ }
+.dialog {
+    padding: 10px;
+    font-size: 15px;
+}
+.dialog  .active {
+    color: lightslategray;
+
+}
+.src {
+    width: 50px;
+    border-radius: 50px ;
+}
+
+.chat {
+    height: 400px;
+    overflow: auto;
+}

@@ -1,0 +1,12 @@
+.photo {
+width: 100px;
+    border-radius: 50px
+}
+.gif {
+    width: 5%;
+    position: absolute;
+    padding: 150px 550px 0px 515px;
+}
+.paginator{
+    padding: 0px 0px 0px  20%;
+}

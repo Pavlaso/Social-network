@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/src/components/comon/Files/ClassProfileStatus.js" />
+    <file url="file://$PROJECT_DIR$/src/components/comon/Files/ClassProfileStatus.test.js" />
+    <file url="file://$PROJECT_DIR$/src/Redux/UserTests/UsersReducer.test.ts" />
+    <file url="file://$PROJECT_DIR$/src/Redux/UserTests/UsersReducer.thunks.test.ts" />
+  </component>
+</project>

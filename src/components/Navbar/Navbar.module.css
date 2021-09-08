@@ -1,0 +1,27 @@
+.nav {
+    background-color: black;
+    grid-row: 1 / 5;
+    padding-right: 3px;
+    font-size: 20px;
+}
+
+.nav div {
+    margin: 10px 0px 10px 0px;
+}
+.nav  a {
+    color: azure;
+    padding: 20px;
+    text-decoration: none;
+}
+.nav a.activeLink {
+    color: lightslategray;
+}
+.ava  {
+    width: 150px;
+}
+.login {
+
+}
+.login span {
+    color: #E8E8E8;
+}
