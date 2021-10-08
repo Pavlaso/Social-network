@@ -1,7 +1,7 @@
 import s from './Login.module.css';
 import {InjectedFormProps, reduxForm} from 'redux-form'
 import {creatorField, Input} from "../comon/FormsControls/FormsControls";
-import {maxLengthCreator, required} from "../../utils/Validators";
+import {maxLengthCreator, required} from "../../assets/utils/Validators";
 import {FC} from "react";
 import {useSelector} from "react-redux";
 import {AppStateType} from "../../Redux/ReduxStore";

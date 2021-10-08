@@ -1,7 +1,7 @@
 import s from './Messages.module.css'
 import Message from "../Items/Message/Message"
 import Name from "../Items/Name/Name"
-import {withAuthRedirect} from "../../../HOC/withAuthRedirect";
+import {withAuthRedirect} from "../../../assets/HOC/withAuthRedirect";
 
 const Messages = () => {
     return (

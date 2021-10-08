@@ -1,4 +1,4 @@
-import {ChatMessageType} from "../components/pages/Chat/ChatPage"
+import {ChatMessageType} from "./../components/chatPages/Chat/ChatPage"
 import {StatusType} from "../Redux/ChatReducer";
 
 type EventNamesType = 'messageReceived' | 'statusChanged'

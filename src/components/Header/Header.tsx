@@ -19,23 +19,27 @@ const HeaderJS: React.FC = () => {
 
     const dispatch = useDispatch()
     useGetProfile()
-    return <Header style={{position: 'fixed', zIndex: 1 , width: '100%', background:'black'}}>
+    return <Header style={{position: 'fixed', zIndex: 1 , width: '100%', background:'white'}}>
 
         <div className="logo"/>
             <Row>
                 <Col span={2}>
-                    <img className={style.reactImg} alt={'logo1'} src={"https://i.pinimg.com/originals/6c/24/5d/6c245ded89fb8029f1e1c7aa3305be11.jpg"}/>
+                    1
                 </Col>
                 <Col span={3}>
-                    <img className={style.reactImg} alt={'logo2'} src={"https://www.quotemaster.org/images/48/484464f8711184a312fd9714e9795bf4.jpg"}/>
+                    2
                 </Col>
             <Col span={13}>
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ background:'black'}}>
-                    <Menu.Item key="1"><Link to='/profile'>Profile</Link></Menu.Item>
-                    <Menu.Item key="2"><Link to='/Messages'>Messages</Link></Menu.Item>
-                    <Menu.Item key="3"><Link to='/Users'>Users</Link></Menu.Item>
-                    <Menu.Item key="4"><Link to='/chat'>Chat</Link></Menu.Item>
+            <div className={style.opthion}>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ background:'white'}}>
+                   
+                        <Menu.Item key="1"><Link to='/profile'>Profile</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to='/Messages'>Messages</Link></Menu.Item>
+                        <Menu.Item key="3"><Link to='/Users'>Users</Link></Menu.Item>
+                        <Menu.Item key="4"><Link to='/chat'>Chat</Link></Menu.Item>
+
                 </Menu>
+                </div>
             </Col>
             <Col span={5}>
                 <div className={style.login}>

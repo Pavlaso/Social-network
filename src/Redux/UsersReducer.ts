@@ -1,6 +1,6 @@
 import {usersAPI} from "../API/UsersAPI";
 import {ObjectHelpers} from "./ObjectsHelpers";
-import {usersType} from "../types/typesTs";
+import {usersType} from "../assets/types/typesTs";
 import {ThunkAction} from "redux-thunk";
 import { AppStateType, InferActionsTypes} from "./ReduxStore";
 import {Dispatch, } from "react";

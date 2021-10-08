@@ -3,7 +3,7 @@ import {creatorField, Input, Textarea} from "../../../comon/FormsControls/FormsC
 import {InjectedFormProps, reduxForm} from "redux-form";
 import s from "../../../login/Login.module.css";
 import {FC} from "react";
-import {ProfileType} from "../../../../types/typesTs";
+import {ProfileType} from "../../../../assets/types/typesTs";
 type PropsType = {
     profile: ProfileType
 }

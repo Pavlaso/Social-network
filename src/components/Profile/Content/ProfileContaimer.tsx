@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import {MyPost} from "./MyPosts/MyPost";
-import { withAuthRedirect } from "../../../HOC/withAuthRedirect";
+import { withAuthRedirect } from "../../../assets/HOC/withAuthRedirect";
 import { useGetProfile } from "../../comon/Hooks/useGetProfile";
 
 const ProfileContainer: FC = () =>{

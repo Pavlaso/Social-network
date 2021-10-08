@@ -1,7 +1,7 @@
 import {Redirect} from "react-router-dom";
 import React, {ComponentType, FC} from "react";
 import {connect} from "react-redux";
-import {AppStateType} from "../Redux/ReduxStore";
+import {AppStateType} from "../../Redux/ReduxStore";
 
 export const withAuthRedirect  = (Component: ComponentType ) => {
     const RedirectComponent: FC<{isAuth: boolean}> = (props) => {

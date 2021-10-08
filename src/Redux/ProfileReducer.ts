@@ -1,6 +1,6 @@
 import {ProfileAPI} from "../API/ProfileAPI"
 import {FormAction, stopSubmit} from "redux-form"
-import {photosType, postType, ProfileType} from "../types/typesTs"
+import {photosType, postType, ProfileType} from "../assets/types/typesTs"
 import {BaseThunkType, InferActionsTypes} from "./ReduxStore"
 
 let installState = {

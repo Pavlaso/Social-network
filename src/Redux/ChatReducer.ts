@@ -1,4 +1,4 @@
-import {ChatMessageType} from "../components/pages/Chat/ChatPage";
+import {ChatMessageType} from "../components/chatPages/Chat/ChatPage";
 import {BaseThunkType, InferActionsTypes} from "./ReduxStore";
 import {ChatAPI} from "../API/ChatAPI";
 import {Dispatch} from "react";

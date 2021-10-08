@@ -4,7 +4,7 @@ import style from "./Mypost.module.css"
 import PostReduxForm from "./PostForm"
 import { useDispatch, useSelector} from "react-redux"
 import {actions} from "../../../../Redux/ProfileReducer"
-import {postType} from "../../../../types/typesTs"
+import {postType} from "../../../../assets/types/typesTs"
 import {AppStateType} from "../../../../Redux/ReduxStore"
 export  const MyPost: FC = React.memo(() => {
     const posts = useSelector((state: AppStateType):Array<postType> =>state.ProfilePage.posts)

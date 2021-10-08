@@ -1,6 +1,6 @@
 import styles from './FormsControls.module.css'
 import {Field, WrappedFieldProps} from "redux-form";
-import {validatorType} from "../../../utils/Validators";
+import {validatorType} from "../../../assets/utils/Validators";
 import React, {FC} from "react";
 
 export const Textarea: FC<WrappedFieldProps> = ({input, meta: {error, touched }, ...props}) => {

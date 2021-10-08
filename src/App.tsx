@@ -12,8 +12,7 @@ import Messages from "./components/Messange/Messages/Messages";
 import Users from "./components/Users/Users";
 import {Layout} from 'antd';
 import HeaderJS from "./components/Header/Header";
-import ChatPage from "./components/pages/Chat/ChatPage";
-import MyForm from "./TestMyForm";
+import ChatPage from "./components/chatPages/Chat/ChatPage";
 const {Content, Footer } = Layout;
 
 

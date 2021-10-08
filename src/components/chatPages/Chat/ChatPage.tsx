@@ -3,7 +3,7 @@ import style from "../../Messange/Items/Name/Name.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {sendMessage, startMessagesListening, stopMessagesListening} from "../../../Redux/ChatReducer";
 import {AppStateType} from "../../../Redux/ReduxStore";
-import {withAuthRedirect} from "../../../HOC/withAuthRedirect";
+import {withAuthRedirect} from "../../../assets/HOC/withAuthRedirect";
 
 const ChatPage: FC = () => {
     const status = useSelector((state: AppStateType) => state.Chat.status)

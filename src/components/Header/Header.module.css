@@ -1,5 +1,5 @@
 .header {
-    background-color: black;
+    background-color: #FFFFFF;
     padding-bottom: 20px;
     grid-column: 2 / 5;
 }
@@ -21,4 +21,7 @@
 .miniAva {
     width: 50px;
     border-radius: 50px ;
+}
+.opthion {
+    color:black;
 }
