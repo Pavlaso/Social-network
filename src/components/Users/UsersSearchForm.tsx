@@ -3,7 +3,7 @@ import React, {FC} from "react"
 import {FilterType} from "../../Redux/UsersReducer";
 import {useSelector} from "react-redux";
 import {getFilter} from "../../Redux/UsersSelectors";
-import Button from "@material-ui/core/Button";
+
 
 const usersSearchFormValidDate = () => { const errors = {}; return errors}
 export const UsersSearchForm: FC<PropsType> = React.memo( (props) => {
@@ -31,9 +31,9 @@ export const UsersSearchForm: FC<PropsType> = React.memo( (props) => {
                     <option value='true'>Only followed</option>
                     <option value='false'>Only unfollowed</option>
                 </Field>
-                <Button type="submit" disabled={isSubmitting}>
+                <button type="submit" disabled={isSubmitting}>
                     Submit
-                </Button>
+                </button>
             </Form>
         )}
     </Formik>

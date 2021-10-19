@@ -1,7 +1,7 @@
 import styles from "./ProfileInfo.module.css";
 import {creatorField, Input, Textarea} from "../../../comon/FormsControls/FormsControls";
 import {InjectedFormProps, reduxForm} from "redux-form";
-import s from "../../../login/Login.module.css";
+import "../../../login/Login.scss";
 import {FC} from "react";
 import {ProfileType} from "../../../../assets/types/typesTs";
 type PropsType = {
@@ -18,7 +18,7 @@ type PropsTypeKeys = Extract<keyof FormProps, string>
 const ProfileDataForm: FC<InjectedFormProps<FormProps, PropsType>&PropsType>= (props) => {
     return <form onSubmit={props.handleSubmit}>
         <div><button>Save</button></div>
-        {props.error && <div className={s.formSummaryError}>
+        {props.error && <div className='formSummaryError'>
             {props.error} </div>}
         <div className={styles.name}>
             {creatorField<PropsTypeKeys>('Full Name', 'fullName', [], Input, '' )}

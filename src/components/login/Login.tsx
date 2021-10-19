@@ -1,10 +1,9 @@
-import LoginReduxForm, {LoginFormValuesType} from "./LoginForm"
+import {LoginFormValuesType} from "./LoginForm"
 import { useDispatch, useSelector} from "react-redux"
 import {getAuthData, loginThunk, } from "../../Redux/AuthReducer"
 import {Redirect} from "react-router-dom"
 import {FC, useEffect} from "react"
 import {AppStateType} from "../../Redux/ReduxStore"
-import TestLogin from "./TestLogin";
 import LoginForm from "./LoginForm";
 
 

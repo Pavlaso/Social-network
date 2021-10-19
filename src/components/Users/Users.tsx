@@ -9,7 +9,7 @@ import {getCurrentPage, getFilter,  getIsFetching, getPageSize, getTotalUsersCou
     from "../../Redux/UsersSelectors"
 import {useHistory} from "react-router-dom"
 import * as queryString from "querystring"
-import {Pagination} from "antd";
+//import {Pagination} from "antd";
 type props = {
     pageTitle: string
 }
@@ -76,13 +76,13 @@ let Users: React.FC<props> = (props) => {
         {
             users.map(users => <User users={users} key={users.id}/>)
         }
-        <Pagination className={style.paginator}
+        {/* <Pagination className={style.paginator}
             pageSize={PageSize}
             onChange={onPostChanged}
         total={totalUsersCount}
         showSizeChanger={false}
         showTotal={total => `Total ${total} items`}
-    />
+    /> */}
     </div>
 }
 export default Users;

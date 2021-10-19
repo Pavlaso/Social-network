@@ -1,4 +1,4 @@
-import s from './Login.module.css';
+
 import {InjectedFormProps, reduxForm} from 'redux-form'
 import {creatorField, Input} from "../comon/FormsControls/FormsControls";
 import {maxLengthCreator, required} from "../../assets/utils/Validators";
@@ -16,31 +16,35 @@ export type LoginFormValuesType = {
     captcha: string
 }
 type LoginFormValuesTypeKeys = Extract<keyof LoginFormValuesType, string>
-
-
-
 const MaxLength10 = maxLengthCreator(10)
+
 const LoginForm: FC<InjectedFormProps<LoginFormValuesType, OwnProps>& OwnProps> = (props) => {
+
     const captchaURL = useSelector((state: AppStateType) => state.Auth.captchaURL)
+
     return (
-        <form onSubmit={props.handleSubmit}>
-            <Field name="email" component={Input} placeholder='Email' />
+        <div className="login">
+            <div className="login__wrapper">
+                <img className="login__image" src="https://www.pngkey.com/png/detail/234-2343734_cyber-icon-lock-image-padlock-flat-facebook-messenger.png" alt="lock" />
+                <form className="login__form" onSubmit={props.handleSubmit}>
+                    <Field className="login__first-field"  name="email" component={Input} placeholder='Email' />
+                    <Field className="login__second-field"  placeholder={'Password'} name={'password'} validate={[required, MaxLength10]} component={Input} type={'password'}/>
+                    <Field className="login__third-field"   name={'rememberMe'} component={Input} type={'checkbox'}/> 
+                    <span> Remember Me </span>
 
-            {creatorField<LoginFormValuesTypeKeys>('Password', 'password',
-                [required, MaxLength10], Input, 'password',)}
-
-            {creatorField<LoginFormValuesTypeKeys>('', 'rememberMe',
-                [], Input, 'checkbox', 'Remember Me')}
-
-            {props.error && <div className={s.formSummaryError}>
-                {props.error}
-            </div>}
-            <div>
-                <button >Login</button>
+                    {props.error && <div className='formSummaryError'>{props.error}</div>}
+                    <div>
+                        <button className="login__btn">Login</button>
+                    </div>
+                    {captchaURL && <img alt={'Captcha'} src={captchaURL}/>}
+                    {captchaURL && <Field className="login__second-field"  placeholder={'Captcha'} name={'captcha'}  component={Input} />}
+                </form>
             </div>
-            {captchaURL && <img alt={'Captcha'} src={captchaURL}/>}
-            {captchaURL && creatorField('Captcha', 'captcha', [], Input, '')}
-        </form>
+        </div>
+        
     )
 }
 export default reduxForm<LoginFormValuesType, OwnProps>({form: 'formLogin'})(LoginForm)
+
+{/* {creatorField<LoginFormValuesTypeKeys>('Password', 'password',[required, MaxLength10], Input, 'password',)} */}
+// {creatorField<LoginFormValuesTypeKeys>('', 'rememberMe',[], Input, 'checkbox', 'Remember Me')}
