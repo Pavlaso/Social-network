@@ -6,7 +6,6 @@ import {FC, useEffect} from "react"
 import {AppStateType} from "../../Redux/ReduxStore"
 import LoginForm from "./LoginForm";
 
-
 const Login: FC = () => {
     const isAuth = useSelector((state: AppStateType) => state.Auth.isAuth)
     const dispatch = useDispatch()

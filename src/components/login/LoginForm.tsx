@@ -25,7 +25,11 @@ const LoginForm: FC<InjectedFormProps<LoginFormValuesType, OwnProps>& OwnProps> 
     return (
         <div className="login">
             <div className="login__wrapper">
-                <img className="login__image" src="https://www.pngkey.com/png/detail/234-2343734_cyber-icon-lock-image-padlock-flat-facebook-messenger.png" alt="lock" />
+                <div className="login__block">
+                    <img className="login__block-image" src="https://www.pngkey.com/png/detail/234-2343734_cyber-icon-lock-image-padlock-flat-facebook-messenger.png" alt="lock" />
+                    <h4 className="login__block-title">Sign in</h4>
+                </div>
+
                 <form className="login__form" onSubmit={props.handleSubmit}>
                     <Field className="login__first-field"  name="email" component={Input} placeholder='Email' />
                     <Field className="login__second-field"  placeholder={'Password'} name={'password'} validate={[required, MaxLength10]} component={Input} type={'password'}/>

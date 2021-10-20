@@ -36,7 +36,7 @@ const App: FC = () => {
                         <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
                     </Switch>
                 </div>
-            <footer style={{ textAlign: 'center'}}>Programming Hub ©2021 Created by Timofey Vlasov</footer>
+            <footer style={{ textAlign: 'center'}}>Programming Hub {'\u00A9'} 2021 Created by Timofey Vlasov</footer>
     </div>
 }
 export const AppContainer: FC = () => {
