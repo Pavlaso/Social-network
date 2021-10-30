@@ -1,0 +1,105 @@
+.headerWrapper {
+    height: 70px;
+    background-color: white;
+}
+
+.header {
+    padding-top: 10px;
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    &__logoBlock {
+        display: flex;
+    }
+    &__logoText {
+        margin-top: 12px;
+        color: black;
+        padding-left: 15px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &__logoImage {
+        width: 60px;
+        margin-top: -5px;
+    }
+    &__opthion {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+     &__link {
+       margin: auto 20px;
+       position: relative;
+     }
+     &__link:first-child {
+        margin-left: 40px;
+      }
+    &__link img{
+        height: 40px;
+    }
+    
+    &__linkActive::after {
+        content: '';
+        position: absolute;
+        border: 2px solid #1877f2;
+        width: 80px;
+        top: 50px;
+        right: 0;
+        left: -20px;
+        margin: 0 auto;
+    }
+}
+.logoLoginBlock {
+    padding-top: 10px;
+    display: flex;
+
+    &__image {
+        width: 70px;
+    }
+    &__text {
+        margin-top: 12px;
+        color: black;
+        width: 800;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.Club {
+    text-align: center;
+    font-family: Aharoni;
+    font-size: 30px;
+}
+.loginBlock {
+    float: right;
+}
+.login {
+    color: black;
+    display: flex;
+    margin-left: 140px;
+    &__text{
+        max-width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    &__btn {
+        width: 100px;
+        border-radius: 20px;
+        border: none;
+        background-color: #dbe7f2;
+        color: #1672e6;
+    }
+}
+.reactImg {
+    height: 30px;
+}
+.miniAva {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px ;
+}
+.opthion {
+    color:black;
+}

@@ -1,4 +1,4 @@
-import React, { FC, useEffect} from "react";
+import React, {FC, useEffect, useState} from "react";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import './scss/style.scss'
 import ProfileContainer from "./components/Profile/Content/ProfileContaimer";
@@ -25,18 +25,22 @@ const App: FC = () => {
     if (!initialized) {return <Preloader/>}
     return <div>
            <HeaderJS/>
-                <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-                    <Switch>
-                        <Route exact path='/' render={() => <Redirect to={'/profile'}/>}/>
-                        <Route path='/profile/:userId?' render={() => <ProfileContainer />}/>
-                        <Route path='/Messages' render={() => <Messages/>}/>
-                        <Route path='/Users' render={() => <Users pageTitle={'Samurai'}/>}/>
-                        <Route path='/login' render={() => <Login/>}/>
-                        <Route path='/chat' render={() => <ChatPage/>}/>
-                        <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
-                    </Switch>
-                </div>
-            <footer style={{ textAlign: 'center'}}>Programming Hub {'\u00A9'} 2021 Created by Timofey Vlasov</footer>
+        <div className='container'>
+            <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+                <Switch>
+                    <Route exact path='/' render={() => <Redirect to={'/profile'}/>}/>
+                    <Route path='/profile/:userId?' render={() => <ProfileContainer />}/>
+                    <Route path='/Messages' render={() => <Messages/>}/>
+                    <Route path='/Users' render={() => <Users pageTitle={'Samurai'}/>}/>
+                    <Route path='/login'  render={() => <Login/>}/>
+                    <Route path='/chat' render={() => <ChatPage/>}/>
+                    <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
+                </Switch>
+            </div>
+        </div>
+        {
+            //<footer style={{ textAlign: 'center'}}>Programming Hub {'\u00A9'} 2021 Created by Timofey Vlasov</footer>
+        }
     </div>
 }
 export const AppContainer: FC = () => {

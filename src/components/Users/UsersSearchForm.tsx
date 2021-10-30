@@ -4,19 +4,19 @@ import {FilterType} from "../../Redux/UsersReducer";
 import {useSelector} from "react-redux";
 import {getFilter} from "../../Redux/UsersSelectors";
 
-
 const usersSearchFormValidDate = () => { const errors = {}; return errors}
+
 export const UsersSearchForm: FC<PropsType> = React.memo( (props) => {
     const filter = useSelector(getFilter)
     const submit = (values: FormType, {setSubmitting}:{setSubmitting: (isSubmitting: boolean) => void}) => {
         const filter: FilterType  = {
             term: values.term,
-            friend: values.friend === "null" ? null : values.friend === "true" ? true : false
+            friend: values.friend === "null" ? null : values.friend === "true" //
         }
         props.onFilterChanged(filter)
         setSubmitting(false)
     }
-    return <div>
+    return <div className='users-search'>
     <Formik
         enableReinitialize
         initialValues={{ term: filter.term, friend: String(filter.friend)as 'null' | 'true' | 'false'}}
@@ -25,7 +25,7 @@ export const UsersSearchForm: FC<PropsType> = React.memo( (props) => {
     >
         {({ isSubmitting }) => (
             <Form>
-                <Field type="text" name="term" />
+                <Field type="text" name="term" className='users-search__search' />
                 <Field  name="friend" as="select">
                     <option value='null'>All</option>
                     <option value='true'>Only followed</option>

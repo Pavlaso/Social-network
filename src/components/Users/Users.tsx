@@ -5,8 +5,7 @@ import React, {useEffect} from "react"
 import {UsersSearchForm} from "./UsersSearchForm"
 import {FilterType,  requestUsers, UsersActions} from "../../Redux/UsersReducer"
 import {useDispatch, useSelector} from "react-redux"
-import {getCurrentPage, getFilter,  getIsFetching, getPageSize, getTotalUsersCount, getUsers}
-    from "../../Redux/UsersSelectors"
+import {getCurrentPage, getFilter,  getIsFetching, getPageSize, getTotalUsersCount, getUsers} from "../../Redux/UsersSelectors"
 import {useHistory} from "react-router-dom"
 import * as queryString from "querystring"
 //import {Pagination} from "antd";

@@ -18,16 +18,7 @@ const Login: FC = () => {
         dispatch(loginThunk(fromData.email, fromData.password, fromData.rememberMe, fromData.captcha));
     }
 
-    return (
-        <div>
-            <header >
-                <h1>Login</h1>
-            </header>
-            {
-            <LoginForm onSubmit={onSubmit}/>
-            }
-        </div>
-    )
+    return <div> { <LoginForm onSubmit={onSubmit}/> } </div>
 }
 
 export default Login

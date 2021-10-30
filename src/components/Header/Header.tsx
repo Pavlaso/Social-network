@@ -1,12 +1,13 @@
 import {Link} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
-import React, { useState } from "react"
+import React, {useEffect, useState} from "react"
 import {AppStateType} from "../../Redux/ReduxStore"
 import style from './Header.module.scss';
 import {Logout} from "../../Redux/AuthReducer";
-//import Ava from "../../assets/images/icon-5359553_1280.png";
-import {useGetProfile} from "../comon/Hooks/useGetProfile";
+
 import classNames from "classnames";
+import { useGetProfile } from "../comon/Hooks/useGetProfile";
+
 
 const HeaderJS: React.FC = () => {
 
@@ -19,15 +20,18 @@ const HeaderJS: React.FC = () => {
     const dispatch = useDispatch()
 
     const image = profile?.photos.large
-    //useGetProfile()
-
+    useGetProfile()
+    console.log('aaaa')
     return <header>
         <div className={style.headerWrapper}>
             <div className="container">
                 {isAuth && 
                 <div className={style.header}>
                     <div className={style.header__logoBlock}> 
-                        <img className={style.header__logoImage} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="logo" />
+                        <img className={style.header__logoImage} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVhOqpRckdF8xt42BWXEejQeuONyY1v191y2Cis_ED9ITOF75F-sRvqwtOUNPh6nHHE8&usqp=CAU' alt="logo" />
+                        {
+                            //'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png'
+                        }
                         <span className={style.header__logoText} >Programming Hub</span>
                     </div>  
                     <nav className={style.header__opthion}>
@@ -47,8 +51,8 @@ const HeaderJS: React.FC = () => {
                 }
                 {!isAuth &&
                     <div className={style.logoLoginBlock}> 
-                        <img className={style.logoLoginBlock__image} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="logo" />
-                        <span className={style.logoLoginBlock__text} >Programming Hub</span>
+                        <img className={style.header__logoImage} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVhOqpRckdF8xt42BWXEejQeuONyY1v191y2Cis_ED9ITOF75F-sRvqwtOUNPh6nHHE8&usqp=CAU" alt="logo" />
+                        <span className={style.header__logoText} >Programming Hub</span>
                     </div>
                 }
                             
@@ -57,3 +61,6 @@ const HeaderJS: React.FC = () => {
     </header>
 }
 export default HeaderJS
+//Last logo: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png
+//import Ava from "../../assets/images/icon-5359553_1280.png";
+//import {useGetProfile} from "../comon/Hooks/useGetProfile";

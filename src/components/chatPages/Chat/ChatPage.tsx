@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {sendMessage, startMessagesListening, stopMessagesListening} from "../../../Redux/ChatReducer";
 import {AppStateType} from "../../../Redux/ReduxStore";
 import {withAuthRedirect} from "../../../assets/HOC/withAuthRedirect";
-
+import ava from "../../../assets/images/icon-5359553_1280.png"
 const ChatPage: FC = () => {
     const status = useSelector((state: AppStateType) => state.Chat.status)
     const dispatch = useDispatch()
@@ -50,7 +50,7 @@ export const Messages: FC = React.memo(() => {
 
 export const Message: FC<{message: ChatMessageType}> = ({message}) => {
     return <div>
-        <img alt={'ava'} className={style.src} src={message.photo}/> <b> {message.userName}</b>
+        <img alt={'ava'} className={style.src} src={message.photo && ava}/> <b> {message.userName}</b>
         <br/>
         {message.message}
         <hr/>
@@ -65,20 +65,17 @@ export const AddChatMessageForm: FC = () => {
     const [message, setMessage] = useState('')
 
     const sendMessageHandler = () => {
-        if(!message) {
-        }
+        //if(!message)
         dispatch(sendMessage(message))
         setMessage('')
     }
-
-
 
     return <div>
         <div>
             <textarea  onChange={(e) => setMessage(e.currentTarget.value)} value={message}/>
         </div>
         <div>
-            {// todo:Чёт кнопка не disabled'ца, я хер пойму, вроде писал код, старался, а она ((((
+            {// todo:Чёт кнопка не disabled'биться, я хер пойму, вроде писал код, старался, а она ((((
             }
             <button disabled={status !== 'ready'}  onClick={sendMessageHandler}>Send</button>
         </div>
